@@ -1,0 +1,63 @@
+header {
+    width: 100%;
+    height: 50px;
+    background: #cdcdcd;
+}
+
+.header {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+header h1 {
+    line-height: 50px;
+    color: #fff;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.content div {
+    display: inline-block;
+}
+
+.content .picture p {
+    margin: 20px 0 0 35px;
+}
+
+.content_box {
+    margin: 20px 70px;
+    text-align: right;
+}
+
+.content_box .content_public {
+    width: 600px;
+    height: 200px;
+    padding: 10px 10px;
+    resize: none;
+}
+
+.article {
+    width: 500px;
+    margin: 50px auto;
+    padding: 10px;
+    display: block;
+    word-wrap: break-word;
+    border: 2px solid #000;
+}
+
+.article h2 {
+    text-align: center;
+}
+
+.article .interaction {
+    text-align: right;
+    margin-right: 6px;
+}
+
+.article .interaction span {
+    cursor: pointer;
+    margin: 3px;
+}
