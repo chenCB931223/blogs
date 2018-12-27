@@ -4,15 +4,16 @@ $(function () {
     $('#btn').on('click', function () {
         $.ajax({
             type: 'post',
-            url: '/public',
-            dataType: 'json',
-            data: $('#form1').serialize(),
+            url: '/public/api',
 
+            data: {
+                title: titleText,
+                text: text
+            },
+            dataType: 'json',
             success: function (result) {
-                console.log(result);
-                if (result.resultCode === 200) {
-                    alert('发布成功！');
-                }
+                window.location.href = '/public/api';
+                alert('成功');
             },
             error: function () {
                 alert('失败');
