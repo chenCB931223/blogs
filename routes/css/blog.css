@@ -1,0 +1,53 @@
+.content {
+    width: 900px;
+    margin: 50px auto;
+    padding: 10px;
+}
+
+.content a {
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.content a:hover {
+    text-decoration: underline;
+    color: #e2e2e2;
+}
+
+.article {
+    width: 900px;
+    margin: 0 auto;
+    padding: 6px;
+    text-align: center;
+}
+
+.article p {
+    text-align: left;
+}
+
+.comment_box {
+    width: 900px;
+    margin: 50px auto;
+}
+
+.comment_box .comment {
+    width: 890px;
+    height: 100px;
+    resize: none;
+    padding: 5px;
+}
+
+.comment_btn {
+    width: 900px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.comment_btn .btn {
+    width: 80px;
+    height: 40px;
+}
+
+.comment_btn .btn:hover {
+    background: rgb(66, 197, 197);
+}

@@ -28,17 +28,17 @@
 
     </div>
     <ul class="article" id="article_mail">
-        <!--  <li>
-            <h2>111</h2>
+        <li>
+            <h2>{{title}}</h2>
         </li>
         <li>
-            <p>11111111111111111111111111111111111111111111111111111111111111111111111111111111111</p>
+            <p>{{text}}</p>
         </li>
         <li class="interaction">
-            <p>1111</p>
+            <p>{{date}}</p>
             <span class="comment">11</span>
             <span class="likes">11</span>
-        </li> -->
+        </li>
     </ul>
     <div class="info">
         <a href="#">上一页</a>
@@ -48,11 +48,6 @@
     <script src="/routes/js/jquery.js"></script>
     <script src="/routes/js/index.js"></script>
     <script src="/routes/js/template.js"></script>
-    <script id="test" type="text/html">
-        {{each }}
-          
-        {{/each}}
-    </script>
 </body>
 
 </html>

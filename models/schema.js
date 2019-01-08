@@ -3,8 +3,8 @@ var schema = mongoose.Schema;
 
 var User = new schema({
     title: String,
-    text: String,
+    content: String,
     date: String
-})
+}, { versionKey: false })
 
-module.exports = mongoose.model('blog', User);
+module.exports = mongoose.model('blogs', User);

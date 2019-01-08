@@ -40,7 +40,7 @@ header h1 {
 }
 
 .article {
-    width: 500px;
+    width: 1000px;
     margin: 50px auto;
     padding: 10px;
     display: block;
@@ -54,10 +54,30 @@ header h1 {
 
 .article .interaction {
     text-align: right;
+    margin-top: 8px;
     margin-right: 6px;
+}
+
+.article .interaction p {
+    float: left;
 }
 
 .article .interaction span {
     cursor: pointer;
     margin: 3px;
+}
+
+.info {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.info a {
+    display: inline-block;
+    width: 50px;
+}
+
+.info p {
+    display: inline-block;
 }

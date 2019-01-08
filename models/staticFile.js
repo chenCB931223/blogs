@@ -2,7 +2,6 @@ var fs = require('fs');
 
 module.exports = function (req, res) {
     var urls = req.url;
-    console.log(urls);
     if (/\/routes/.test(urls)) {
         if (/\.css$/.test(urls)) {
             res.writeHead(200, { 'content-type': 'text/css' })

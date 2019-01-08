@@ -1,18 +1,20 @@
-$(function () {
-    var titleText = $('#text').val(),
-        text = $('#content_text').val();
-    $('#btn').on('click', function () {
+$(document).ready(function () {
+
+    $('#btn').click(function () {
+        var titleText = $('#text').val(),
+            contentText = $('#content_text').val();
         $.ajax({
             type: 'post',
             url: '/public/api',
 
             data: {
                 title: titleText,
-                text: text
+                content: contentText
             },
             dataType: 'json',
             success: function (result) {
-                window.location.href = '/public/api';
+                console.log(result)
+                window.location.href = '/public/?id=' + result._id;
                 alert('成功');
             },
             error: function () {

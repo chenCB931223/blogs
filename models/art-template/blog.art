@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/routes/css/rest.css">
+    <link rel="stylesheet" href="/routes/css/blog.css">
+</head>
+
+<body>
+    <div class="content">
+        <a href="/">返回首页</a>
+        <a href="/public">写博客</a>
+    </div>
+    <div class="article">
+        <h1>{{title}}</h1>
+        <p>{{content}}</p>
+    </div>
+
+    <div class="comment_box">
+        <textarea id="comment" class="comment" cols="30" rows="10"></textarea>
+    </div>
+    <div class="comment_btn">
+        <button type="button" class="btn">评论</button>
+    </div>
+    <script src="/routes/js/jquery.js"></script>
+    <script src="/routes/js/blog.js"></script>
+</body>
+
+</html>
