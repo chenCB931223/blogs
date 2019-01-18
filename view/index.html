@@ -41,16 +41,26 @@
         </li> -->
     </ul>
     <div class="info">
-        <a href="#">上一页</a>
-        <p>第1/2页</p>
-        <a href="#">下一页</a>
+        <a href="javascript:;" class="prev" id="prev">上一页</a>
+        <p id="info_message"></p>
+        <a href="javascript:;" class="next" id="next">下一页</a>
     </div>
     <script src="/routes/js/jquery.js"></script>
-    <script src="/routes/js/index.js"></script>
     <script src="/routes/js/template.js"></script>
+    <script src="/routes/js/index.js"></script>
+
     <script id="test" type="text/html">
-        {{each }}
-          
+        {{each list value i}}
+        <li>
+            <h2><a href="/public/?id={{value._id}}">{{value.title}}</a></h2>
+            <p>{{value.content}}</p>
+        </li>
+
+        <!-- <li class="interaction">
+            <p>1111</p>
+            <span class="comment">11</span>
+            <span class="likes">11</span>
+        </li> -->
         {{/each}}
     </script>
 </body>

@@ -16,12 +16,13 @@ mongoose.connect(url, { useNewUrlParser: true }, function (err) {
     }
 })
 var server = http.createServer((req, res) => {
-    getindex(req, res);
+
     reachPublic(req, res);
     staticFile(req, res);
     data(req, res);
     blog(req, res);
     showIndex(req, res);
+    getindex(req, res);
 });
 server.listen(9000, function () {
     console.log(new Date() + 'running');

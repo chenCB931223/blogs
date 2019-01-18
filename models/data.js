@@ -18,7 +18,8 @@ module.exports = function (req, res) {
 
             schema.find({
                 title: title
-            }).then(function () {
+            }).then(function (doc) {
+                console.log(doc);
                 var blog = new schema({
                     title: title,
                     content: text,
@@ -28,13 +29,14 @@ module.exports = function (req, res) {
                 return blog.save();
             }).then(function (newData) {
                 var body = JSON.stringify(newData);
+
                 res.writeHead(200, { 'content-type': 'text/html' });
                 res.write(body);
                 res.end();
 
                 return newData;
             }).catch(function (err) {
-                console.error(err);
+                throw err;
             });
             return;
 

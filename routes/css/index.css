@@ -42,14 +42,31 @@ header h1 {
 .article {
     width: 1000px;
     margin: 50px auto;
-    padding: 10px;
     display: block;
     word-wrap: break-word;
-    border: 2px solid #000;
+}
+
+.article li {
+    height: 100px;
+    padding-top: 10px;
+    border-bottom: 1px solid #000;
+}
+
+.article li:first {
+    border-top: 1px solid #000;
 }
 
 .article h2 {
     text-align: center;
+}
+
+.article h2 a {
+    color: rgba(0, 0, 0, 0.63);
+}
+
+.article h2 a:hover {
+    color: rgba(0, 0, 255, 0.192);
+    text-decoration: underline;
 }
 
 .article .interaction {
