@@ -12,9 +12,10 @@ module.exports = function (req, res) {
     //         res.end(data);
     //     })
     // }
-    if (req.url === '/index') {
+    if (/^\/api\/impress/.test(req.url)) {
 
         var newUrl = url.parse(req.url, true);
+        console.log('newUrl', newUrl);
         var page_num = newUrl.query.page_num || 1;
         schema.find().sort({ _id: -1 }).then((docs) => {
             var limit = 3;

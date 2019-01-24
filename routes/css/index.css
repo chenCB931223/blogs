@@ -49,6 +49,7 @@ header h1 {
 .article li {
     height: 100px;
     padding-top: 10px;
+    padding-bottom: 10px;
     border-bottom: 1px solid #000;
 }
 
@@ -97,4 +98,17 @@ header h1 {
 
 .info p {
     display: inline-block;
+}
+
+.comment_like {
+    float: right;
+    margin-right: 80px;
+}
+
+.comment_like a {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: url('/routes/images/favorite.png') no-repeat 0 0;
+    margin-bottom: -2px;
 }

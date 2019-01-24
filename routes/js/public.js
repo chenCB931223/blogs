@@ -5,7 +5,7 @@ $(document).ready(function () {
             contentText = $('#content_text').val();
         $.ajax({
             type: 'post',
-            url: '/public/api',
+            url: '/api/public',
 
             data: {
                 title: titleText,
@@ -14,7 +14,7 @@ $(document).ready(function () {
             dataType: 'json',
             success: function (result) {
                 console.log(result)
-                window.location.href = '/public/?id=' + result._id;
+                window.location.href = '/acticle/?id=' + result._id;
                 alert('成功');
             },
             error: function () {

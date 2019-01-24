@@ -18,7 +18,7 @@
     </header>
     <div class="content">
         <div class="picture">
-            <img src="/blog.gif" alt="">
+            <!-- <img src="/blog.gif" alt=""> -->
             <p>用户昵称:</p>
         </div>
 
@@ -28,17 +28,6 @@
 
     </div>
     <ul class="article" id="article_mail">
-        <!--  <li>
-            <h2>111</h2>
-        </li>
-        <li>
-            <p>11111111111111111111111111111111111111111111111111111111111111111111111111111111111</p>
-        </li>
-        <li class="interaction">
-            <p>1111</p>
-            <span class="comment">11</span>
-            <span class="likes">11</span>
-        </li> -->
     </ul>
     <div class="info">
         <a href="javascript:;" class="prev" id="prev">上一页</a>
@@ -52,10 +41,15 @@
     <script id="test" type="text/html">
         {{each list value i}}
         <li>
-            <h2><a href="/public/?id={{value._id}}">{{value.title}}</a></h2>
+            <h2><a href="/acticle/?id={{value._id}}" id="{{value._id}}">{{value.title}}</a></h2>
             <p>{{value.content}}</p>
+            <p>{{value.date}}</p>
+            <div class="comment_like">
+                   <a href="javascript:;" class="like_icon"></a>
+                    <span id="like_number">{{value.like}}</span>
+            </div>
+            
         </li>
-
         <!-- <li class="interaction">
             <p>1111</p>
             <span class="comment">11</span>

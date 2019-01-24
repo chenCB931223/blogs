@@ -4,7 +4,9 @@ var getindex = require('./models/getIndex'),
     reachPublic = require('./models/reachPublic'),
     data = require('./models/data'),
     blog = require('./models/blogs'),
-    showIndex = require('./models/showIndex');
+    showIndex = require('./models/showIndex'),
+    like = require('./models/like'),
+    comment = require('./models/comment');
 
 var mongoose = require('mongoose'),
     url = 'mongodb://localhost:27017/chen';
@@ -23,6 +25,8 @@ var server = http.createServer((req, res) => {
     blog(req, res);
     showIndex(req, res);
     getindex(req, res);
+    comment(req, res);
+    like(req, res);
 });
 server.listen(9000, function () {
     console.log(new Date() + 'running');
