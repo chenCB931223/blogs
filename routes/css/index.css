@@ -57,6 +57,10 @@ header h1 {
     border-top: 1px solid #000;
 }
 
+.article li .date {
+    margin-top: 10px;
+}
+
 .article h2 {
     text-align: center;
 }
@@ -111,4 +115,9 @@ header h1 {
     display: inline-block;
     background: url('/routes/images/favorite.png') no-repeat 0 0;
     margin-bottom: -2px;
+}
+
+.article_info {
+    height: 20px;
+    overflow: hidden;
 }

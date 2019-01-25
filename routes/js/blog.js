@@ -25,6 +25,14 @@ $(document).ready(function () {
 
     })
 
+    $('#remove').on('click', function () {
+        var titleId = $('h1').data('id');
+        $.get('/remove', {
+            id: titleId
+        }, function (doc) {
+            console.log(doc);
+        })
+    })
 
     $('.like_icon').on('click', function () {
 

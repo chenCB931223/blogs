@@ -42,8 +42,10 @@
         {{each list value i}}
         <li>
             <h2><a href="/acticle/?id={{value._id}}" id="{{value._id}}">{{value.title}}</a></h2>
-            <p>{{value.content}}</p>
-            <p>{{value.date}}</p>
+            <div class="article_info">
+                <p>{{value.content}}</p>
+            </div>
+            <p class="date">{{value.date}}</p>
             <div class="comment_like">
                    <a href="javascript:;" class="like_icon"></a>
                     <span id="like_number">{{value.like}}</span>

@@ -12,13 +12,14 @@ module.exports = function (req, res) {
 
         req.on('end', function () {
             var obj = queryString.parse(data);
-            var date = new Date(new Date().getTime());
+            var newDate = new Date();
+            var date = newDate.getFullYear() + '-' + (newDate.getMonth() + 1) + '-' + newDate.getDate() + ' '
+                + newDate.getHours() + ':' + newDate.getMinutes() + ':' + newDate.getSeconds();
             var title = obj.title,
                 text = obj.content;
             schema.find({
                 title: title
-            }).then(function (doc) {
-                console.log(doc);
+            }).then(function () {
                 var blog = new schema({
                     title: title,
                     content: text,

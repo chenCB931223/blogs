@@ -19,6 +19,7 @@
     margin: 0 auto;
     padding: 6px;
     text-align: center;
+    word-wrap: break-word;
 }
 
 .article p {

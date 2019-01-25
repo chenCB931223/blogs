@@ -13,11 +13,13 @@ module.exports = function (req, res) {
             var id = data.id.replace(/\"/g, '');
 
             var comment = data.comment;
+            var newDate = new Date();
+            var date = newDate.getFullYear() + '-' + (newDate.getMonth() + 1) + '-' + newDate.getDate() + ' '
+                + newDate.getHours() + ':' + newDate.getMinutes() + ':' + newDate.getSeconds();
             schema.findOne({ _id: id }).then((doc) => {
-                console.log(doc);
                 commentInfo = {
                     text: comment,
-                    date: new Date(new Date().getTime())
+                    date: date
 
                 }
                 doc.comment.unshift(commentInfo);
@@ -31,7 +33,7 @@ module.exports = function (req, res) {
 
                 return result;
             }).catch((err) => {
-                throw err;
+                console.error(err);
             })
         })
     }

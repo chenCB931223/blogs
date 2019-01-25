@@ -6,6 +6,7 @@ var getindex = require('./models/getIndex'),
     blog = require('./models/blogs'),
     showIndex = require('./models/showIndex'),
     like = require('./models/like'),
+    removeBlog = require('./models/removeBlog'),
     comment = require('./models/comment');
 
 var mongoose = require('mongoose'),
@@ -27,6 +28,7 @@ var server = http.createServer((req, res) => {
     getindex(req, res);
     comment(req, res);
     like(req, res);
+    removeBlog(req, res);
 });
 server.listen(9000, function () {
     console.log(new Date() + 'running');

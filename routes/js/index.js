@@ -9,7 +9,6 @@ $(document).ready(function () {
         var html = template('test', doc);
         $('#article_mail').html(html);
         $('#info_message').html(`第${doc.page_num}/${doc.pages}页`);
-        console.log(typeof doc.page_num, typeof doc.pages);
         $('#next').attr('href', '/impress/?page_num=' + (Math.floor(doc.page_num) + 1))
 
         if (doc.page_num == doc.pages) {
